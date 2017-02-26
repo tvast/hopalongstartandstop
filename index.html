@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>hopalong</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body >
+
+hello
+
+	<audio  loop id="player" src="audio/behind a cigarette.wav"></audio>
+	<div> 
+		<button onclick="document.getElementById('player').play()">Play</button> 
+		<button onclick="document.getElementById('player').pause()">Pause</button> 
+		<button onclick="document.getElementById('player').volume += 0.1">Vol+ </button> 
+		<button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
+		<button onclick="myStopFunction()" >stop</button>
+		<button onclick="myFunction()">draw</button>
+	</div>
+
+	
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.min.js'></script>
+
+	<script src="js/index.js"></script>
+
+</body>
+</html>

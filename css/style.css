@@ -1,0 +1,9 @@
+body {
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white
+}
+
+canvas {
+	background-color: white
+}
