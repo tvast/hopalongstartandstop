@@ -8,11 +8,38 @@
 
 
 	<link rel="stylesheet" href="css/style.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.min.js'></script>
+
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+
+	  // function drawe(){
+   //              var canvas = document.getElementsByTagName('canvas');
+   //              var ctx = canvas[0].getContext("2d");
+   //              ctx.fillStyle = "rgba(125, 46, 138, 0.5)";
+   //              ctx.fillRect(25,25,100,100);
+   //              ctx.fillStyle = "rgba( 0, 146, 38, 0.5)";
+   //              ctx.fillRect(58, 74, 125, 100);
+   //          }
+		      function downloadImage()
+            {
+                var canvas = document.getElementsByTagName('canvas');
+                var image = canvas[0].toDataURL();
+
+                var aLink = document.createElement('a');
+                var evt = document.createEvent("HTMLEvents");
+                evt.initEvent("click");
+                aLink.download = 'image.png';
+                aLink.href = image;
+                aLink.dispatchEvent(evt);
+                console.log('coucou')
+            }
+	</script>
 
 
 </head>
 
-<body >
+<body>
 
 hello
 
@@ -24,13 +51,23 @@ hello
 		<button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
 		<button onclick="myStopFunction()" >stop</button>
 		<button onclick="myFunction()">draw</button>
+
+		<div><button onclick="save ()">Download</button></div>
+    <image id="theimage"></image>
 	</div>
+
 
 	
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.min.js'></script>
-
-	<script src="js/index.js"></script>
+	
+	<script src="reimg.js"></script>
+  <script type="text/javascript">
+    // convert canvas to png
+    function save () {
+    var png = ReImg.fromCanvas(document.getElementsByTagName('canvas')).toPng(hopa.png);
+    console.log('coucou');
+    }
+  </script>
 
 </body>
 </html>

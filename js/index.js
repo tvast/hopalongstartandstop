@@ -267,28 +267,28 @@ function windowResized() {
 //   cameray = mouseY - height/2;
 // }
 
-// function mouseClicked() {
-//   hopa = hopalong(random(AMIN, AMAX), 
-//     random(BMIN, BMAX), 
-//     random(CMIN, CMAX), 
-//     random(DMIN, DMAX), 
-//     random(EMIN, EMAX), hop.numPoints);
-// }
-var songSpeed = document.getElementById("player").defaultPlaybackRate
-var intervale = 3000
-var time
+function mouseClicked() {
+  hopa = hopalong(random(AMIN, AMAX), 
+    random(BMIN, BMAX), 
+    random(CMIN, CMAX), 
+    random(DMIN, DMAX), 
+    random(EMIN, EMAX), hop.numPoints);
+}
+// var songSpeed = document.getElementById("player").defaultPlaybackRate
+// var intervale = 3000
+// var time
 
-var myVar = setInterval(function(){ myFunction() }, 1000);
+// var myVar = setInterval(function(){ myFunction() }, 1000);
 
 function myFunction() {
 
-  console.log('coucou');
-  var myAudio = document.getElementById("player");
-  var rate = myAudio.defaultPlaybackRate;
-  console.log(rate)
-  var time = 1/rate;
-  var long = myAudio.duration;
-  console.log(time); // => duration, in seconds
+  // console.log('coucou');
+  // var myAudio = document.getElementById("player");
+  // var rate = myAudio.defaultPlaybackRate;
+  // console.log(rate)
+  // var time = 1/rate;
+  // var long = myAudio.duration;
+  // console.log(time); // => duration, in seconds
   var i=0;
   for (i = 0; i < long ; i++) { 
      // var myVar setInterval(function(){ 
