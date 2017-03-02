@@ -47,7 +47,11 @@
 
 				
 				//create an image in the page
-				document.write("<img src='"+d+"' alt='from canvas'/>");
+				 var elem = document.getElementById('uniqueId');
+    var img = document.createElement('img');
+    img.setAttribute('src', d);
+    elem.appendChild(img);
+				// document.write("<img src='"+d+"' alt='from canvas'/>");
 
 
 
@@ -72,10 +76,11 @@ hello
 		<button onclick="myFunction()">draw</button>
 
 		<div><button onclick="downloadImage()">Download</button></div>
-		<div><button onclick="downloadImage()">Download rems</button></div>
+		<div><button onclick="save()">Download rems</button></div>
   
-    <img id="demo" src="">
+    
 	</div>
+	<div id="uniqueId"></div>
 
 
 	
