@@ -23,16 +23,20 @@
    //          }
 		      function downloadImage()
             {
-                var canvas = document.getElementsByTagName('canvas');
-                var image = canvas[0].toDataURL();
+                // var canvas = document.getElementsByTagName('canvas');
+                // var image = canvas[0].toDataURL();
 
-                var aLink = document.createElement('a');
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent("click");
-                aLink.download = 'image.png';
-                aLink.href = image;
-                aLink.dispatchEvent(evt);
-                console.log('coucou')
+                // var aLink = document.createElement('a');
+                // var evt = document.createEvent("HTMLEvents");
+                // evt.initEvent("click");
+                // aLink.download = 'image.png';
+                // aLink.href = image;
+                // aLink.dispatchEvent(evt);
+                // console.log('coucou')
+                var canvas = document.getElementsByTagName('canvas');
+				var d=canvas[0].toDataURL("image/png");
+				var w=window.open('about:blank','image from canvas');
+				w.document.write("<img src='"+d+"' alt='from canvas'/>");
             }
 	</script>
 
@@ -52,7 +56,7 @@ hello
 		<button onclick="myStopFunction()" >stop</button>
 		<button onclick="myFunction()">draw</button>
 
-		<div><button onclick="save ()">Download</button></div>
+		<div><button onclick="downloadImage()">Download</button></div>
     <image id="theimage"></image>
 	</div>
 
@@ -64,7 +68,7 @@ hello
   <script type="text/javascript">
     // convert canvas to png
     function save () {
-    var png = ReImg.fromCanvas(document.getElementsByTagName('canvas')).toPng(hopa.png);
+    var png = ReImg.fromCanvas(document.getElementsByTagName('canvas')).toImg();
     console.log('coucou');
     }
   </script>
