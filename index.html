@@ -33,10 +33,25 @@
                 // aLink.href = image;
                 // aLink.dispatchEvent(evt);
                 // console.log('coucou')
-                var canvas = document.getElementsByTagName('canvas');
+    //             var canvas = document.getElementsByTagName('canvas');
+				// var d=canvas[0].toDataURL("image/png");
+				// var w=window.open('about:blank','image from canvas');
+				// w.document.write("<img src='"+d+"' alt='from canvas'/>");
+
+				var canvas = document.getElementsByTagName('canvas');
 				var d=canvas[0].toDataURL("image/png");
-				var w=window.open('about:blank','image from canvas');
-				w.document.write("<img src='"+d+"' alt='from canvas'/>");
+
+				//open a new window
+				// var w=window.open('about:blank','image from canvas');
+				// w.document.write("<img src='"+d+"' alt='from canvas'/>");
+
+				
+				//create an image in the page
+				document.write("<img src='"+d+"' alt='from canvas'/>");
+
+
+
+
             }
 	</script>
 
@@ -57,14 +72,16 @@ hello
 		<button onclick="myFunction()">draw</button>
 
 		<div><button onclick="downloadImage()">Download</button></div>
-    <image id="theimage"></image>
+		<div><button onclick="downloadImage()">Download rems</button></div>
+  
+    <img id="demo" src="">
 	</div>
 
 
 	
 
 	
-	<script src="reimg.js"></script>
+	<script src="js/reimg.js"></script>
   <script type="text/javascript">
     // convert canvas to png
     function save () {

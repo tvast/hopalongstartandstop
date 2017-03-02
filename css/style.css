@@ -8,3 +8,9 @@ canvas {
 	background-color: white
 	display: none;
 }
+
+
+img {
+	width: 150px
+	height: 150px;
+}
